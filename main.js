@@ -37,7 +37,9 @@ import appUserRouter from "./routes/appuser.routes.js";
 
 const app = express();
 // Use the PORT from environment variables, fallback to 6002 if not defined
-const PORT = process.env.PORT || 6002;
+const PORT = process.env.PORT || 10000; // Fallback to 10000 if not set
+
+
 
 // Understand for the given the data of Postman
 app.use(express.json());
