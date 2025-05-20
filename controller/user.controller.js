@@ -41,9 +41,6 @@ export const readUser = async (req, res) => {
     }
 };
 
-
-
-
 export const createUser = async (req, res) => {
     const { Username, Email, Password, ConfirmPassword, PhoneNumber } = req.body;
 
@@ -141,13 +138,6 @@ export const createUser = async (req, res) => {
     }
 };
 
-
-
-
-
-
-
-
 export const singleReadUser = async (req, res) => {
     try {
         const updateUser = await AppUser.findById(req.params.id);
@@ -160,8 +150,6 @@ export const singleReadUser = async (req, res) => {
         return res.status(500).json({message: error.message});
     }
 }
-
-
 
 export const updateUser = async (req, res) => {
     try {
